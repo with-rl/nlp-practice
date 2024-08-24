@@ -1,7 +1,7 @@
 import os
 import argparse
 
-from tokenizers import ByteLevelBPETokenizer  # CharBPETokenizer
+from tokenizers import CharBPETokenizer  # ByteLevelBPETokenizer
 
 
 def define_config():
@@ -25,7 +25,7 @@ def main():
     unused_tokens = [f"<unused_{i}>" for i in range(100)]
 
     # train tokenizer
-    tokenizer = ByteLevelBPETokenizer()
+    tokenizer = CharBPETokenizer()
     tokenizer.train(
         files=config.train_files,
         vocab_size=config.vocab_size,

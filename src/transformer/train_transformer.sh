@@ -7,7 +7,7 @@ python3.9 train_transformer.py \
     --valid_tgt_fn "../../data/aihub_koen/valid.en" \
     --tokenizer "../../data/aihub_koen_32k" \
     --output_dir "../../checkpoints" \
-    --n_epochs 3 \
-    --batch_size_per_device 64 \
+    --n_epochs 1 \
+    --batch_size_per_device 32 \
     --gradient_accumulation_steps 4 \
     --fp16

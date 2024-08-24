@@ -8,5 +8,5 @@ python3.9 train_seq2seq.py \
     --tokenizer "../../data/aihub_koen_32k" \
     --output_dir "../../checkpoints" \
     --gpu_id 0 \
-    --n_epochs 10 \
+    --n_epochs 1 \
     --with_attention

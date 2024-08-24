@@ -5,4 +5,4 @@ python3.9 train_rnn.py \
     --tokenizer "../../data/aihub_koen_32k" \
     --output_dir "../../checkpoints" \
     --gpu_id 0 \
-    --n_epochs 4
+    --n_epochs 1
