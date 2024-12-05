@@ -30,8 +30,10 @@ def main(config):
                 break
             with open(file) as f_in:
                 for line in f_in:
-                    text = json.loads(line)["text"]
-                    f_out.write(text)
+                    wiki = json.loads(line)
+                    f_out.write(wiki["title"])
+                    f_out.write("\n")
+                    f_out.write(wiki["text"])
                     f_out.write("\n" * 4)
 
 
