@@ -24,7 +24,7 @@ def gen_train_prompt(example):
 def main():
     MODEL_ID = "google/gemma-3-1b-it"
     # dataset
-    dataset = load_dataset("e9t/nsmc")
+    dataset = load_dataset("Blpeng/nsmc")
 
     # declare 4 bits quantize
     quantization_config = BitsAndBytesConfig(load_in_4bit=True, bnb_4bit_quant_type="nf4", bnb_4bit_compute_dtype=torch.float16)

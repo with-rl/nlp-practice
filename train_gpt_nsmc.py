@@ -50,7 +50,12 @@ class NSMCCollator:
 
 def main():
     # hugging face dataset
-    dataset = load_dataset("e9t/nsmc")
+    dataset = load_dataset("Blpeng/nsmc")
+    # NaN, None, 빈 문자열 제거
+    def drop_nan(example):
+        return example["document"] is not None and example["document"] != "" and str(example["document"]).lower() != "nan"
+    dataset = dataset.filter(drop_nan)
+
     # taain dataset
     train_dataset = NSMCDataset(dataset["train"])
     # test dataset
